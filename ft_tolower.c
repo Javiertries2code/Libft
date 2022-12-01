@@ -1,5 +1,5 @@
-void ft_toupper(char ch)
+void ft_toupper(int c)
 {
-    if (ch >= 'A' && ch <= 'Z')
-        ch = ch + 32;
+    if (c >= 'A' && c <= 'Z')
+        c = c + 32;
 }

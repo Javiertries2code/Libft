@@ -1,27 +1,37 @@
-
-char *ft_strchr(char *str, int c)
+#include<string.h>
+char *ft_strchr(char *s, int c)
 {
 int i;
 int lenght;
 
 lenght = 0;
-while (str[lenght])
+while (s[lenght] || s[lenght - 1])
 	{
-
 		lenght++;
 	}
 
 i = lenght -1;
 
-while (str[i] && i >= 0)
+while (s[i] && i >= 0)
 	{
 
-		if (c == str[i])
-			return  &str[i];
+		if (c == s[i])
+			return  &s[i];
+		else
+
 	i--;
 
 	}
 
-return (&str[lenght]);
+return (&s[lenght]);
 }
 
+
+// int main()
+// {
+// 	char ch = 'x';
+// 	printf("%c\n", *ft_strchr("hobla carabola", ch));
+// 		printf("%c\n", *(ft_strchr("hola carabola", ch)+1));
+
+
+// }

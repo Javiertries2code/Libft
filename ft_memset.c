@@ -1,21 +1,18 @@
-#include<string.h>
-
+#include<stdio.h>
 
 void ft_memset(void *str, int c, size_t n)
 {
 unsigned char ch;
-unsigned int i;
 char *str2;
 str2 = (char *)str;
-i = 1;
 ch = (unsigned char)c;
-while (i <= n)
+
+while ( n > 0)
  {
 	*str2 = (char)ch;
-	i++;
+	n--;
 	str2++;
  }
- str2 = str2 - i;
 }
 
 
@@ -26,7 +23,8 @@ while (i <= n)
 // unsigned char ch = '$';
 
 
-// ft_memset(str + 12, (int)ch, 3);
+// ft_memset(str + 5, (int)ch, 3);
+
 
 // printf("%s\n", str);
 

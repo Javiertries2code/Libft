@@ -1,4 +1,4 @@
-#include<string.h>
+#include<stdio.h>
 
 
  void ft_bzero(void *s, size_t n)
@@ -13,8 +13,6 @@ while ( i++ <= n)
 	*num2 = 0;
 	num2++;
 }
-num2 = num2 -i;
-s = num2;
 }
 
 

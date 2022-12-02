@@ -1,6 +1,3 @@
-#include<stdlib.h>
-#include<unistd.h>
-#include<stdio.h>
 #include<string.h>
 
 
@@ -20,12 +17,12 @@ return (0);
 
 }
 
-int main()
-{
-const char *str1 = "holafgdsgasdf";
-const char *str2 = "maslar";
-unsigned int num = 8;
+// int main()
+// {
+// const char *str1 = "holafgdsgasdf";
+// const char *str2 = "maslar";
+// unsigned int num = 8;
 
-printf("%d\n",ft_strncmp(str1, str2, num));
-	return (0);
-}
+// printf("%d\n",ft_strncmp(str1, str2, num));
+// 	return (0);
+// }

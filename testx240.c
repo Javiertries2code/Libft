@@ -4,28 +4,46 @@
 #include<string.h>
 
 
-       int ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-unsigned int i;
+
+       int ft_memcmp(const void *s1, const void *s2, size_t n)
+	   	   {
+ int count;
+ unsigned int i;
+char *str1;
+char *str2;
 
 i = 0;
-while ( s1[i] && s2[i] && i < n)
-	i++;
-if (s1[i] && !s2[i])
-		return (1);
-if (s2[i] && !s1[i])
-		return (-1);
-else 
-return (0);
+count = 0;
+str1 = (char *)s1;
+str2 = (char *)s2;
 
+while (n > i)
+{
+// No se, intento que sume el valor de los caracteres a ver si es eso o algo
+
+ 	// if (str1[n -1])
+	// 	count = count + (int)str1(n-1);
+	// if (str2[n - 1])
+	// 	count = count + (int)str2(n-1);
+n--;
+printf("%d\n", (int)n);
+printf("%d\n", count);
+
+
+}
+return (count);
+	
 }
 
 int main()
 {
-const char *str1 = "holafgdsgasdf";
-const char *str2 = "maslar";
-unsigned int num = 8;
+const char *str1 = "8 dsa\0fdsa\0dfsfds	";
+const char *str2 = "h\0d\0\0ja\0fgd\0gasdf";
+unsigned int num = 15;
 
-printf("%d\n",ft_strncmp(str1, str2, num));
+printf("xx%d\n",ft_memcmp(str1, str2, num));
+printf("YY%d\n",memcmp(str1, str2, num));
+
+
 	return (0);
 }

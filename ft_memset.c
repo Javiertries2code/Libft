@@ -1,10 +1,10 @@
 #include<stdio.h>
 
-void ft_memset(void *str, int c, size_t n)
+void ft_memset(void *s, int c, size_t n)
 {
 unsigned char ch;
 char *str2;
-str2 = (char *)str;
+str2 = (char *)s;
 ch = (unsigned char)c;
 
 while ( n > 0)
@@ -16,17 +16,17 @@ while ( n > 0)
 }
 
 
-// int main()
-// {
-//  char str[] = "SoloLosBobosBebenVinoBarato";
+int main()
+{
+ char str[] = "SoloLosBobosBebenVinoBarato";
 
-// unsigned char ch = '$';
-
-
-// ft_memset(str + 5, (int)ch, 3);
+unsigned char ch = '$';
 
 
-// printf("%s\n", str);
+ft_memset(str + 5, (int)ch, 3);
 
-// 	return (0);
-// }
+
+printf("%s\n", str);
+
+	return (0);
+}

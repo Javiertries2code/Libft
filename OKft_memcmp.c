@@ -1,5 +1,5 @@
 #include<string.h>
-
+//#include<stdio.h>
 
 
        int ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -8,25 +8,21 @@
  unsigned int i;
 char *str1;
 char *str2;
-unsigned int j;
 
 i = 0;
 count = 0;
 str1 = (char *)s1;
 str2 = (char *)s2;
-j = n;
 
-while (j > i)
+while (i < n)
 {
-if (str1[j -1] != '\0')
-		count = count + 1;
-if (str2[j - 1] != '\0')
-		count = count-1;
-j--;
-printf("%d\n", j);
-printf("%d\n", count);
+if (str1[i] != str2[i])
+{
+count = str1[i] - str2[i];
+return (count);
+}
 
-
+i++;
 }
 return (count);
 	
@@ -34,9 +30,9 @@ return (count);
 
 // int main()
 // {
-// const char *str1 = "h\0\0jjkolafgdsgasdf";
-// const char *str2 = "maslarijh\0\0ufftoijoiy";
-// unsigned int num = 14;
+// const char *str1 = "022344";
+// const char *str2 = "022344";
+// unsigned int num = 5;
 
 // printf("xx%d\n",ft_memcmp(str1, str2, num));
 // 	return (0);

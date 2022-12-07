@@ -1,5 +1,5 @@
 #include<string.h>
-
+//#include<stdio.h>
 
 void ft_memmove(void *dest, const void *src, size_t n)
 	   	   {
@@ -31,7 +31,7 @@ strsrc = (char *)src;
 // {
 //  char strdst[] = "123456789101112";
 //  char strsrc[] = "popopo";
-// unsigned int num = 3;
+// unsigned int num = 2;
 // ft_memmove(strdst, strsrc, num);
 // printf("%c\n", strdst[0]);
 // printf("%c\n", strdst[1]);

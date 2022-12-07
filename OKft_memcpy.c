@@ -1,7 +1,7 @@
 #include<string.h>
+//#include<stdio.h>
 
-
-void ft_memcpy(void *dest, const void *src, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 	   	   {
 unsigned int i = 1;
 char *strdest;
@@ -14,7 +14,7 @@ strsrc = (char *)src;
 	strdest[n-1] = strsrc[n-1];
 	n--;
 	}
-
+	return ((void *)dest);
 }
 
 // int main()
@@ -27,7 +27,7 @@ strsrc = (char *)src;
 // printf("%c\n", strdst[0]);
 // printf("%c\n", strdst[1]);
 // printf("%c\n", strdst[2]);
-// printf("%c\n", strdst[5]);
+// printf("%c\n\n\n", strdst[5]);
 // memcpy(strdst, strtest, 4);                      
 // printf("%c\n", strdst[0]);
 // printf("%c\n", strdst[1]);

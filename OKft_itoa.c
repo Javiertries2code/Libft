@@ -1,7 +1,4 @@
 #include<string.h>
-#include<stdlib.h>
-#include<stdio.h>
-#include<string.h>
 
   int counter(int n, unsigned int count)
 {

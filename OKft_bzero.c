@@ -16,18 +16,18 @@ while ( i++ <= n)
 }
 
 
-// int main()
-// {
-//  int num[12] = {12,32,43,54,65,65,76,76,87,87,6,5};
+int main()
+{
+ int num[12] = {12,32,43,54,65,65,76,76,87,87,6,5};
 
-// int i;
+int i;
 
-// ft_bzero(num, 3);
+ft_bzero(num, 3);
 
-// for (i=0; i < 11; i++)
-// {
-// 	printf("%d\n", num[i]);
-// }
+for (i=0; i < 11; i++)
+{
+	printf("%d\n", num[i]);
+}
 
-// 	return (0);
-// }
+	return (0);
+}

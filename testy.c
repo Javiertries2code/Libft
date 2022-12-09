@@ -1,20 +1,62 @@
+#include<string.h>
 #include<stdlib.h>
-#include<unistd.h>
 #include<stdio.h>
 #include<string.h>
 
+  int counter(int n, unsigned int count)
+{
+if (n < 0)
+{
+	n = -n;
+	count++;
+}
+if (n > 9)
+{
+	n = n/10;
+	count++;
+	count = counter(n, count);
+}
+
+return (count);
+}
+
+ char *ft_itoa(int n)
+{
+ 	char *str;
+	int count;
+	
+count = counter(n, 1);
+str = (char *)malloc((count+1)*sizeof(char));
+str[count + 1] = '\0';
+if (n < 0)
+{
+	str[0] = '-';
+	//count--;
+	n = -n;
+	
+	printf("st dig%c", str[0]);
+
+}
+while (n > 9)
+{
+		str[count--] = n%10 + 0 ;
+	printf("\n numero %c", str[count - 1]);
+
+	n = n / (10);
+
+
+}
+return (str);	
+}
+
 int main()
 {
-const void *str1;
-const void *str2;
-unsigned int num;
+int i =  -123456789;
+printf("counter in main%d\n", counter(i, 1));
 
-str1 = "0001";
-str2 = "0004";
-num = 4;
-	printf("\n%d", memcmp(str1, str2, num));
+char *str = ft_itoa(i);
 
-	printf("\n%d", memcmp("a", "d", 2));
+printf("este el el numero en texto\n%s\n", str);
 
-	return (0);
+return (0);
 }

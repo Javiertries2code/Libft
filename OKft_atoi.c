@@ -1,4 +1,4 @@
-
+//#include<stdio.h>
 int ft_atoi (const char *str)
 {
 int i;
@@ -25,3 +25,8 @@ while (str[i])
 
 return num;
 }
+
+// int main()
+// {
+//     printf ("%d", ft_atoi("34"));
+// }

@@ -28,12 +28,12 @@ return (count);
 	
 }
 
-// int main()
-// {
-// const char *str1 = "022344";
-// const char *str2 = "022344";
-// unsigned int num = 5;
+int main()
+{
+const char *str1 = "022344";
+const char *str2 = "022344";
+unsigned int num = 5;
 
-// printf("xx%d\n",ft_memcmp(str1, str2, num));
-// 	return (0);
-// }
+printf("xx%d\n",ft_memcmp(str1, str2, num));
+	return (0);
+}

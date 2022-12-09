@@ -14,9 +14,9 @@ i++;
 	return(&s[i]);
 }
 
-// int main()
-// {
-// 	char ch = '\n';
-// 	printf("%c\n", *ft_strchr("hobla carabola", ch));
-// 		printf("%c\n", *(ft_strchr("hola carabola", ch)+1));
-// }
+int main()
+{
+	char ch = '\n';
+	printf("%c\n", *ft_strchr("hobla carabola", ch));
+		printf("%c\n", *(ft_strchr("hola carabola", ch)+1));
+}

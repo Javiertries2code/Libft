@@ -1,34 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbravo <jbravo@student.42urduliz.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/18 21:21:06 by jbravo            #+#    #+#             */
-/*   Updated: 2022/12/18 21:21:29 by jbravo           ###   ########.fr       */
+/*   Created: 2022/12/18 21:08:59 by jbravo            #+#    #+#             */
+/*   Updated: 2022/12/18 21:15:36 by jbravo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	i;
+	int				count;
+	unsigned int	i;
+	char			*str1;
+	char			*str2;
 
 	i = 0;
-	while (s[i] || s[i - 1])
+	count = 0;
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	while (i < n)
 	{
-		if (c == s[i])
-			return (&s[i]);
+		if (str1[i] != str2[i])
+		{
+			count = str1[i] - str2[i];
+			return (count);
+		}
 		i++;
 	}
-	return (&s[i]);
+	return (count);
 }
 
 // int	main(void)
 // {
-// 	char ch = '\n';
-// 	printf("%c\n", *ft_strchr("hobla carabola", ch));
-// 	printf("%c\n", *(ft_strchr("hola carabola", ch) + 1));
+// 	const char *str1 = "022344";
+// 	const char *str2 = "022344";
+// 	unsigned int num = 5;
+
+// 	printf("xx%d\n", ft_memcmp(str1, str2, num));
+// 	return (0);
 // }

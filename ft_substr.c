@@ -1,34 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbravo <jbravo@student.42urduliz.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/18 21:21:06 by jbravo            #+#    #+#             */
-/*   Updated: 2022/12/18 21:21:29 by jbravo           ###   ########.fr       */
+/*   Created: 2022/12/18 21:31:17 by jbravo            #+#    #+#             */
+/*   Updated: 2022/12/18 21:31:20 by jbravo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	unsigned int	i;
+	char			*str;
 
 	i = 0;
-	while (s[i] || s[i - 1])
+	str = (char *)malloc(len * sizeof(char));
+	if (!sizeof(str))
+		return (NULL);
+	while (i < len)
 	{
-		if (c == s[i])
-			return (&s[i]);
+		str[i] = s[start + i];
 		i++;
 	}
-	return (&s[i]);
+	//printf("%s\n", str);
+	return (str);
 }
 
-// int	main(void)
+// int main()
 // {
-// 	char ch = '\n';
-// 	printf("%c\n", *ft_strchr("hobla carabola", ch));
-// 	printf("%c\n", *(ft_strchr("hola carabola", ch) + 1));
+//  char *str = "Hola carabola string";
+// char *ptr;
+
+// ptr = ft_substr(str, 5, 8);
+
+// printf("%s\n", ptr);
+
+// return (0);
 // }
